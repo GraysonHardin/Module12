@@ -18,9 +18,6 @@ class Customer:
         if self.customer_id < 1000 or self.customer_id > 9999:
             raise InvalidCustomerIdException
 
-      #  if not self.last_name.isalpha() or not self.first_name.isalpha():
-         #   raise InvalidNameException
-
         if not isinstance(self.last_name, str) or not isinstance(self.first_name, str):
             raise InvalidNameException
 
