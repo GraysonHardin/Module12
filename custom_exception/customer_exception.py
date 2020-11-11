@@ -18,10 +18,13 @@ class Customer:
         if self.customer_id < 1000 or self.customer_id > 9999:
             raise InvalidCustomerIdException
 
-        if not self.last_name.isalpha() or not self.first_name.isalpha():
+      #  if not self.last_name.isalpha() or not self.first_name.isalpha():
+         #   raise InvalidNameException
+
+        if not isinstance(self.last_name, str) or not isinstance(self.first_name, str):
             raise InvalidNameException
 
-        if self.phone_number < '123-123-1234' or self.phone_number > '123-123-1234':
+        if len(phone_number) != 12:
             raise InvalidPhoneNumberFormat
 
     def __str__(self):
@@ -37,11 +40,17 @@ except:
     print('Invalid customer ID!')
 
 try:
-    Customer(customer_id=1000, last_name=123, first_name='Grayson', phone_number='123-123-1234')
-    Customer(customer_id=1000, last_name='Hardin', first_name=123, phone_number='123-123-1234')
+    Customer(customer_id=1000, last_name='123', first_name='Grayson', phone_number='123-123-1234')
 
 except:
     print('Invalid name!')
+
+try:
+        Customer(customer_id=1000, last_name='Hardin', first_name='123', phone_number='123-123-1234')
+except:
+    print('Invalid name!')
+
+
 
 try:
     Customer(customer_id=1000, last_name='Hardin', first_name='Grayson', phone_number='123-123-12342')
@@ -49,5 +58,5 @@ try:
 except:
     print('Invalid phone number!')
 
-customer1 = Customer(1000, 'Ruiz', 'Matthew', '123-123-1234')
+customer1 = Customer(1000, 'Ruiz', 'Matthew', '515-313-1519')
 print(customer1.__str__())

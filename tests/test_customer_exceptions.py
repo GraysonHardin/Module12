@@ -22,12 +22,12 @@ class MyTestCase(unittest.TestCase):
 
     def test_customer_with_invalid_last_name(self):
         with self.assertRaises(InvalidNameException) as err:
-            Customer(customer_id=1000, last_name='4', first_name='Grayson', phone_number='123-123-1234')
+            Customer(customer_id=1000, last_name=3, first_name='Grayson', phone_number='123-123-1234')
         self.assertTrue('Invalid name!' in str(err.exception))
 
     def test_customer_with_invalid_first_name(self):
         with self.assertRaises(InvalidNameException) as err:
-            Customer(customer_id=1000, last_name='Hardin', first_name='4', phone_number='123-123-1234')
+            Customer(customer_id=1000, last_name='Hardin', first_name=3, phone_number='123-123-1234')
         self.assertTrue('Invalid name!' in str(err.exception))
 
     def test_customer_with_invalid_phone_number(self):
@@ -37,8 +37,11 @@ class MyTestCase(unittest.TestCase):
 
 # Valid Tests
     def test_customer_id_with_valid_all_valid_attributes(self):
-        variable = Customer(customer_id=1000, last_name='Hardin', first_name='Grayson', phone_number='123-123-1234')
-        self.assertEqual(variable.customer_id, 1000)
+        customer = Customer(customer_id=1000, last_name='Hardin', first_name='Grayson', phone_number='123-123-1234')
+        self.assertEqual(customer.customer_id, 1000)
+        self.assertEqual(customer.last_name, 'Hardin')
+        self.assertEqual(customer.first_name, 'Grayson')
+        self.assertEqual(customer.phone_number, '123-123-1234')
 
     def test_customer_str(self):
         expected = 'The Customer ID is: 1000 The last name is: Hardin The first name is: Grayson The phone number is: 123-123-1234'
