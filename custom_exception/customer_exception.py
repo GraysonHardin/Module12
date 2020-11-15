@@ -1,8 +1,9 @@
 """
-Program: customer_class.py
+Program: customer_exception.py
 Author: Grayson Hardin
-Last date modified: 11/1/2020
-This takes in a list of names, customer id and various contact info. The program also shows examples of a proper input and an improper input.
+Last date modified: 11/15/2020
+
+The program will print to the console if the customer ID and/or phone number is invalid. Likewise, it can print the proper output as well.
 """
 
 from custom_exception.custom_exceptions import InvalidCustomerIdException, InvalidNameException, InvalidPhoneNumberFormat

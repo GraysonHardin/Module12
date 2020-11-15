@@ -1,3 +1,10 @@
+"""
+Program: abstract_class.py
+Author: Grayson Hardin
+Last date modified: 11/15/2020
+
+Uses three classes and will display an appropriate message for each.
+"""
 from abc import abstractmethod, ABC
 
 

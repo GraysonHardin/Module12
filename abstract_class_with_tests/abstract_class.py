@@ -1,3 +1,10 @@
+"""
+Program: abstract_class.py
+Author: Grayson Hardin
+Last date modified: 11/15/2020
+
+Displays various messages that come from three individual classes and includes unit testing.
+"""
 from abc import abstractmethod, ABC
 
 
