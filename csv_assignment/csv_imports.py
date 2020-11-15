@@ -3,7 +3,7 @@ Program: csv_imports.py
 Author: Grayson Hardin
 Last date modified: 11/15/2020
 
-Inherits data from the Iowa Census and can either print all of its content or filter selected data to the console.
+Inherits data from the 2010 Iowa Census and can either print all of its content or filter selected data to the console.
 """
 import csv
 import locale
